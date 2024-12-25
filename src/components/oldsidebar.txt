@@ -1,0 +1,125 @@
+<Box>
+        <List
+          sx={{
+            padding: 0,
+            bgcolor: "background.paper",
+          }}
+        >
+          <Divider component="li" sx={{ marginY: 0 }} />
+          <ListItem disablePadding sx={{ marginY: 0 }}>
+            <ListItemButton
+              sx={{ padding: "4px 8px" }}
+              component={Link}
+              to="/Dashboard"
+            >
+              <ListItemIcon sx={{ minWidth: 32 }}>
+                <Home fontSize="small" />
+              </ListItemIcon>
+              <ListItemText
+                primary="Dashboard"
+                primaryTypographyProps={{
+                  variant: "body2",
+                  sx: { fontSize: "0.85rem" }, // Compact font size
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
+          <Divider component="li" sx={{ marginY: 0 }} />
+          <ListItem disablePadding sx={{ marginY: 0 }}>
+            <ListItemButton
+              sx={{ padding: "4px 8px" }}
+              component={Link}
+              to="../users/UsersProfile"
+            >
+              <ListItemIcon sx={{ minWidth: 32 }}>
+                <Settings fontSize="small" />
+              </ListItemIcon>
+              <ListItemText
+                primary="Create User"
+                primaryTypographyProps={{
+                  variant: "body2",
+                  sx: { fontSize: "0.85rem" },
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
+          {/* Add more menu items here */}
+          <Divider component="li" sx={{ marginY: 0 }} />
+          <ListItem disablePadding sx={{ marginY: 0 }}>
+            <ListItemButton
+              sx={{ padding: "4px 8px" }}
+              component="a"
+              href="#home"
+            >
+              <ListItemIcon sx={{ minWidth: 32 }}>
+                <Home fontSize="small" />
+              </ListItemIcon>
+              <ListItemText
+                primary="Home"
+                primaryTypographyProps={{
+                  variant: "body2",
+                  sx: { fontSize: "0.85rem" }, // Compact font size
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
+          <Divider component="li" sx={{ marginY: 0 }} />
+          <ListItem disablePadding sx={{ marginY: 0 }}>
+            <ListItemButton
+              sx={{ padding: "4px 8px" }}
+              component="a"
+              href="#sample-list"
+            >
+              <ListItemIcon sx={{ minWidth: 32 }}>
+                <Settings fontSize="small" />
+              </ListItemIcon>
+              <ListItemText
+                primary="About"
+                primaryTypographyProps={{
+                  variant: "body2",
+                  sx: { fontSize: "0.85rem" },
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
+          <Divider component="li" sx={{ marginY: 0 }} />
+          <ListItem disablePadding sx={{ marginY: 0 }}>
+            <ListItemButton
+              sx={{ padding: "4px 8px" }}
+              component="a"
+              href="#home"
+            >
+              <ListItemIcon sx={{ minWidth: 32 }}>
+                <Home fontSize="small" />
+              </ListItemIcon>
+              <ListItemText
+                primary="Home"
+                primaryTypographyProps={{
+                  variant: "body2",
+                  sx: { fontSize: "0.85rem" }, // Compact font size
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
+          <Divider component="li" sx={{ marginY: 0 }} />
+          <ListItem disablePadding sx={{ marginY: 0 }}>
+            <ListItemButton
+              sx={{ padding: "4px 8px" }}
+              component="a"
+              href="#sample-list"
+            >
+              <ListItemIcon sx={{ minWidth: 32 }}>
+                <Settings fontSize="small" />
+              </ListItemIcon>
+              <ListItemText
+                primary="About"
+                primaryTypographyProps={{
+                  variant: "body2",
+                  sx: { fontSize: "0.85rem" },
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
+          <Divider component="li" sx={{ marginY: 0 }} />
+        </List>
+      </Box>
