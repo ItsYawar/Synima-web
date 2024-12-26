@@ -23,13 +23,13 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1 
+        uses: bahmutov/npm-install@v1 #we can also write npm install but someone create this library for cache purpose no need to everytime. we can also remove bahmutov
 
       - name: Build project
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: production-files
           path: ./build
@@ -42,7 +42,7 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: production-files
           path: ./build
