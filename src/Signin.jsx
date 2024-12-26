@@ -173,7 +173,7 @@ const Signin = (props) => {
         />
         <Card variant="outlined">
           {/* <SitemarkIcon /> */}
-          SYNIMA
+          SYNIMA - All in one platform for your business
           <Typography
             component="h1"
             variant="h4"
