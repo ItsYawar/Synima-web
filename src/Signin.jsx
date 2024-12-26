@@ -258,7 +258,7 @@ const Signin = (props) => {
             }}
           >
             <CopyrightIcon fontSize="small" />
-            Powered by Syntigic
+            Powered by Syntigic Inc.
           </Box>
           {/* <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <Button
