@@ -38,7 +38,7 @@ function App(props) {
   
   return (
  <UserProvider>
-    <Router>
+    <Router basename="/Synima-web">
     <Routes>
       <Route path="/" element={<SignIn />} />
       <Route path="Dashboard" element={<Dashboard />} />
