@@ -20,7 +20,7 @@ import ColorModeSelect from "../src/shared-theme/ColorModeSelect";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import { Router, Routes, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
 
 const SignInContainer = styled(Stack)(({ theme }) => ({
   height: "calc((1 - var(--template-frame-height, 0)) * 100dvh)",
@@ -74,7 +74,7 @@ const Signin = (props) => {
     email: "",
     password: "",
   });
-  const [error, setError] = React.useState("");
+  //const [error, setError] = React.useState("");
   const navigate = useNavigate();
   const [userName, setUserName] = React.useState("");
 
@@ -131,16 +131,16 @@ const Signin = (props) => {
     // Check if inputs are valid
     if (!validateInputs()) return;
 
-    const userEmail = document.getElementById("email").value;
-    const userPassword = document.getElementById("password").value;
+    const userName = document.getElementById("email").value;
+    const Password = document.getElementById("password").value;
 
     try {
       // Make API call
       const response = await axios.post(
-        "http://localhost:5000/api/Login/authenticate",
+        "http://samyar90-001-site1.jtempurl.com/api/Auth/login",
         {
-          userEmail,
-          userPassword,
+          userName,
+          Password,
         }
       );
       console.log(response.data);
@@ -149,7 +149,8 @@ const Signin = (props) => {
         // Create a session with expiry
         const sessionData = {
           userName: response.data.userName,
-          expiry: new Date().getTime() + 60 * 60 * 1000, // 1-hour expiry
+          token: response.data.token, 
+          expiry: response.data.tokenExpiry  //new Date().getTime() + 60 * 60 * 1000, // 1-hour expiry
         };
         sessionStorage.setItem("userSession", JSON.stringify(sessionData));
 
