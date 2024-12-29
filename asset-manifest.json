@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Synima-web/static/js/main.363eeea0.js",
+    "main.js": "/Synima-web/static/js/main.8f56a1ff.js",
     "index.html": "/Synima-web/index.html",
-    "main.363eeea0.js.map": "/Synima-web/static/js/main.363eeea0.js.map"
+    "main.8f56a1ff.js.map": "/Synima-web/static/js/main.8f56a1ff.js.map"
   },
   "entrypoints": [
-    "static/js/main.363eeea0.js"
+    "static/js/main.8f56a1ff.js"
   ]
 }
