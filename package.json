@@ -45,5 +45,6 @@
     ] },
     "devDependencies": {
       "gh-pages": "^6.2.0"
-  }
+  },
+  "proxy": "http://samyar90-001-site1.jtempurl.com"
 }
