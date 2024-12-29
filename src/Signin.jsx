@@ -137,7 +137,7 @@ const Signin = (props) => {
     try {
       // Make API call
       const response = await axios.post(
-        "http://samyar90-001-site1.jtempurl.com/api/Auth/login",
+        "https://samyar90-001-site1.jtempurl.com/api/Auth/login",
         {
           userName,
           Password,
