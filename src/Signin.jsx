@@ -143,7 +143,7 @@ const Signin = (props) => {
           Password,
         }
       );
-      console.log(response.data);
+      //console.log(response.data);
       // Handle API response
       if (response.data.authenticated) {
         // Create a session with expiry
