@@ -188,7 +188,7 @@ const CreateCustomer = () => {
   
     try {
       const response = await axios.post(
-        "http://localhost:5041/api/Customer/CreateCustomer",
+        "https://samyar90-001-site1.jtempurl.com/api/Customer/CreateCustomer",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
