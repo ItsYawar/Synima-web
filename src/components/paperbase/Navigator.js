@@ -29,7 +29,7 @@ const categories = [
       { id: 'Create Profile', icon: <DnsRoundedIcon />, to: '/CreateProfile' },
       { id: 'List of Users', icon: <PermMediaOutlinedIcon />, to: '/CustomerList' },
       { id: 'Dynamic', icon: <PublicIcon />, to: '/DynamicForm' },
-      { id: 'Functions', icon: <SettingsEthernetIcon />, to: '/Functions' },
+      { id: 'Create Customer', icon: <SettingsEthernetIcon />, to: '/CreateCustomer' },
       { id: 'Machine learning', icon: <SettingsInputComponentIcon />, to: '/MachineLearning' },
     ],
   },

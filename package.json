@@ -12,11 +12,13 @@
     "@mui/x-data-grid": "^7.23.1",
     "@testing-library/react": "^16.1.0",
     "axios": "^1.7.9",
+    "country-state-city": "^3.2.1",
     "cra-template": "1.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.0.2",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "react-window": "^1.8.11"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -42,9 +44,10 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ] },
-    "devDependencies": {
-      "gh-pages": "^6.2.0"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   },
   "proxy": "http://samyar90-001-site1.jtempurl.com"
 }

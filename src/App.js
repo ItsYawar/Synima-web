@@ -30,6 +30,7 @@ import Starter from './components/paperbase/Starter';
 import CustomerList from './components/Customers/CustomerList';
 import CreateProfile from './components/Customers/CreateProfile';
 import DynamicForm from './components/Customers/DynamicForm';
+import CreateCustomer from './components/Customers/CreateCustomer';
  
  
 
@@ -47,6 +48,7 @@ function App(props) {
       <Route path="/Starter" element={<Starter />} />
       <Route path="/CustomerList" element={<CustomerList />} />
       <Route path="/CreateProfile" element={<CreateProfile />} />
+      <Route path="/CreateCustomer" element={<CreateCustomer />} />
       <Route path="/DynamicForm" element={<DynamicForm />} />
       {/* <Route path="/Sidebar" element={<Sidebar />} />
       <Route path="/Navbar" element={<Navbar />} /> */}
