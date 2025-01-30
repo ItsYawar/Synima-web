@@ -25,20 +25,22 @@ const categories = [
   {
     id: 'Menu',
     children: [
-      { id: 'Starter', icon: <PeopleIcon />, to: '/Starter' },
-      { id: 'Create Profile', icon: <DnsRoundedIcon />, to: '/CreateProfile' },
+      // { id: 'Starter', icon: <PeopleIcon />, to: '/Starter' },
+      { id: 'Create Profile', icon: <DnsRoundedIcon />, to: '/CreateCustomer' },
       { id: 'List of Users', icon: <PermMediaOutlinedIcon />, to: '/CustomerList' },
-      { id: 'Dynamic', icon: <PublicIcon />, to: '/DynamicForm' },
-      { id: 'Create Customer', icon: <SettingsEthernetIcon />, to: '/CreateCustomer' },
-      { id: 'Machine learning', icon: <SettingsInputComponentIcon />, to: '/MachineLearning' },
+      // { id: 'Dynamic', icon: <PublicIcon />, to: '/DynamicForm' },
+      { id: 'Contacts', icon: <SettingsEthernetIcon />, to: '/Contacts' },
+      { id: 'List of Contacts', icon: <SettingsEthernetIcon />, to: '/ContactsList' },
+
+      // { id: 'Machine learning', icon: <SettingsInputComponentIcon />, to: '/MachineLearning' },
     ],
   },
   {
     id: 'Reports',
     children: [
-      { id: 'Analytics', icon: <SettingsIcon />, to: '/Analytics' },
-      { id: 'Performance', icon: <TimerIcon />, to: '/Performance' },
-      { id: 'Test Lab', icon: <PhonelinkSetupIcon />, to: '/TestLab' },
+      // { id: 'Analytics', icon: <SettingsIcon />, to: '/Analytics' },
+      // { id: 'Performance', icon: <TimerIcon />, to: '/Performance' },
+      // { id: 'Test Lab', icon: <PhonelinkSetupIcon />, to: '/TestLab' },
     ],
   },
 ];

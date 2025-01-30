@@ -31,6 +31,8 @@ import CustomerList from './components/Customers/CustomerList';
 import CreateProfile from './components/Customers/CreateProfile';
 import DynamicForm from './components/Customers/DynamicForm';
 import CreateCustomer from './components/Customers/CreateCustomer';
+import Contacts from './components/Users/Contacts';
+import ContactsList from './components/Users/ContactsList';
  
  
 
@@ -47,9 +49,11 @@ function App(props) {
       <Route path="/Feed" element={<Feed />} />
       <Route path="/Starter" element={<Starter />} />
       <Route path="/CustomerList" element={<CustomerList />} />
-      <Route path="/CreateProfile" element={<CreateProfile />} />
+      <Route path="/Contacts" element={<Contacts />} />
       <Route path="/CreateCustomer" element={<CreateCustomer />} />
       <Route path="/DynamicForm" element={<DynamicForm />} />
+      <Route path="/ContactsList" element={<ContactsList />} />
+
       {/* <Route path="/Sidebar" element={<Sidebar />} />
       <Route path="/Navbar" element={<Navbar />} /> */}
     </Routes>

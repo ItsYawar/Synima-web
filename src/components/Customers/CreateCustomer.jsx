@@ -48,7 +48,7 @@ const CreateCustomer = () => {
     const fetchFields = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5041/api/FormElements/1"
+          "https://samyar90-001-site1.jtempurl.com/api/FormElements/1"
         );
         const data = response.data;
 
