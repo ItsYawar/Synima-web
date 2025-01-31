@@ -3,52 +3,29 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import Navigator from "../paperbase/Navigator";
-
 import Header from "../paperbase/Header";
 import Copyright from "../Copyright";
-import themeOverrides from "../theme"; // Import the theme
+import themeOverrides from "../theme";
 import AllCustomerContacts from "./AllCustomerContacts";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import IconButton from "@mui/material/IconButton";
-import SearchIcon from "@mui/icons-material/Search";
-import RefreshIcon from "@mui/icons-material/Refresh";
 import Toolbar from "@mui/material/Toolbar";
-import TextField from "@mui/material/TextField";
 import AppBar from "@mui/material/AppBar";
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-} from "@mui/material";
+import { Dialog, DialogTitle, DialogContent, DialogActions } from "@mui/material";
+import Contacts from "./Contacts";
 
-import Contacts from "./Contacts"; // Import the Contacts component
 const drawerWidth = 256;
+
 const ContactsList = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [dialogOpen, setDialogOpen] = React.useState(false);
   const isSmUp = useMediaQuery(themeOverrides.breakpoints.up("sm"));
-  // Handle dialog open/close
+
   const handleDialogOpen = () => setDialogOpen(true);
   const handleDialogClose = () => setDialogOpen(false);
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+  const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
 
-  const [isDialogOpen, setIsDialogOpen] = React.useState(false);
-
-  //   const handleDialogOpen = () => {
-  //     setIsDialogOpen(true);
-  //   };
-
-  //   const handleDialogClose = () => {
-  //     setIsDialogOpen(false);
-  //   };
   return (
     <ThemeProvider theme={themeOverrides}>
       <Box sx={{ display: "flex", minHeight: "100vh" }}>
@@ -70,14 +47,25 @@ const ContactsList = () => {
             sx={{ display: { sm: "block", xs: "none" } }}
           />
         </Box>
-        <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            overflow: "hidden", // Prevent overflow on the main container
+          }}
+        >
           <Header onDrawerToggle={handleDrawerToggle} />
           <Box
             component="main"
-            sx={{ flex: 1, py: 6, px: 4, bgcolor: "#eaeff1" }}
+            sx={{
+              flex: 1,
+              py: 6,
+              px: 4,
+              bgcolor: "#eaeff1",
+              overflow: "hidden", // Prevent overflow on the main content area
+            }}
           >
-            {/* This is the Content Area */}
-            {/* This is Contact List page */}
             <AppBar position="static" color="transparent" elevation={0}>
               <Toolbar>
                 <Grid container spacing={2} sx={{ alignItems: "center" }}>
@@ -94,18 +82,23 @@ const ContactsList = () => {
                 </Grid>
               </Toolbar>
             </AppBar>
-            <AllCustomerContacts />
-
-            {/* Dialog for opening Contacts.jsx */}
+            <Box
+              sx={{
+                width: "100%",
+                overflow: "auto", // Enable scrolling inside the DataGrid container
+              }}
+            >
+              <AllCustomerContacts />
+            </Box>
             <Dialog
               open={dialogOpen}
               onClose={handleDialogClose}
               fullWidth
-              maxWidth="lg" // Adjust as needed
+              maxWidth="lg"
             >
               <DialogTitle>Add New Contact</DialogTitle>
               <DialogContent>
-                <Contacts /> {/* Render Contacts inside Dialog */}
+                <Contacts />
               </DialogContent>
             </Dialog>
           </Box>

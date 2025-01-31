@@ -16,10 +16,7 @@ const AllCustomerContacts = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:5041/api/Contacts/GetAllContacts"
-        );
-
+        const response = await axios.get("http://localhost:5041/api/Contacts/GetAllContacts");
         const groupedData = {};
         response.data.forEach((item) => {
           const customerId = item.customerId;
@@ -66,7 +63,7 @@ const AllCustomerContacts = () => {
       width: 160,
       sortable: false,
       renderCell: (params) => (
-        <Box>
+        <Box sx={{ display: "flex", gap: 1 }}>
           <IconButton color="primary" onClick={() => handleView(params.row.id)}>
             <VisibilityIcon />
           </IconButton>
@@ -83,17 +80,19 @@ const AllCustomerContacts = () => {
 
   return (
     <ThemeProvider theme={themeOverrides}>
-      <Box sx={{ display: "flex", justifyContent: "center", padding: 2 }}>
-        <Paper sx={{ width: "100%", maxWidth: "100%", padding: 2 }}>
-          <DataGrid
-            rows={rows}
-            columns={columns}
-            getRowId={(row) => row.id}
-          
-            loading={loading}
-            checkboxSelection
-            //autoHeight //  Adjusts height based on data
-          />
+      <Box sx={{ width: "100%", height: "100vh", padding: 2 }}>
+        <Paper sx={{ width: "100%", height: "100%", overflow: "hidden" }}>
+          <Box sx={{ width: "100%", height: "100%" }}>
+            <DataGrid
+              rows={rows}
+              columns={columns}
+              getRowId={(row) => row.id}
+              loading={loading}
+              checkboxSelection
+              autoPageSize
+              sx={{ height: "100%" }}
+            />
+          </Box>
         </Paper>
       </Box>
     </ThemeProvider>
