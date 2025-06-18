@@ -209,6 +209,7 @@ const Contacts = () => {
       }}
     >
       {/* Left Column: Upload Photo */}
+      
       <Box
         sx={{
           flex: { xs: "0 0 100%", sm: "0 0 33.33%", md: "0 0 25%" }, // Adjust the width according to the screen size
